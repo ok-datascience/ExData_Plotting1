@@ -11,9 +11,10 @@ plot(plotData$Date, plotData$Sub_metering_1, type="n", xlab="", ylab = "Energy s
 lines(plotData$Date, plotData$Sub_metering_1)
 lines(plotData$Date, plotData$Sub_metering_2, col="red")
 lines(plotData$Date, plotData$Sub_metering_3, col="blue")
-legend("topright", c("Sub_metering_1", "Sub_metering_2",  "Sub_metering_3"), col=c("black","red", "blue"), lty=c(1, 1, 1))
+legend("topright", c("Sub_metering_1", "Sub_metering_2",  "Sub_metering_3"), col=c("black","red", "blue"), lty=c(1, 1, 1), cex=0.8, y.intersp=0.5,  text.width = strwidth("Sub_metering_1"))
 
 # save plot to the file in PNG image format
 dev.copy(png, 'plot3.png')
 dev.off()
+
 
